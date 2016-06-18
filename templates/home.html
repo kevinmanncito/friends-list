@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    {% if not name %}
+        <h1>Sign to be my friend (I need your name)</h1>
+    {% else %}
+        <h1>Success! {{ name }}, you are now my friend! Here is a link to <a href="/friends/">all my other friends</a></h1>
+    {% endif %}
+    <form method="POST">
+        <input name="name" type="text" placeholder="First and last name">
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
